@@ -1,1 +1,10 @@
-# 2024-25_GP_5
+<img align="center" src="Mubayin/images/Mubayin_Logo.png" alt="Mubayin Logo" width="350"/>
+
+
+#  Mubayin | مُبيِّــــن  
+## **Introduction** 
+**Mubayin** .....
+
+## **Technology Stack** 
+
+## **Launching Instructions** 
