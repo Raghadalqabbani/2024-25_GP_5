@@ -1,4 +1,4 @@
-<img align="center" src="Mubayin/images/Mubayin_Logo.png" alt="Mubayin Logo" width="350"/>
+<img src="Mubayin/images/Mubayin_Logo.png" alt="Mubayin Logo" width="350"/>
 
 
 #  Mubayin | مُبيِّــــن  
