@@ -7,4 +7,4 @@
 
 ## **Technology Stack 🌟** 
 
-## **Launching Instructions 💫** 
+## **Launching Instructions ⭐** 
