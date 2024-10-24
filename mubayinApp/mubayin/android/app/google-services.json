@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "389462520301",
+    "project_id": "mubayin-353c1",
+    "storage_bucket": "mubayin-353c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389462520301:android:bb8fbf0e40efc3c68ef7e4",
+        "android_client_info": {
+          "package_name": "com.mycompany.mubayin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4e0h-uGOlpH0GYYp5RMZ5TmtYLsS712g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
