@@ -14,7 +14,7 @@
 - **Cloud Services:** Google Cloud ☁️
 - **Database:** MySQL 🗄️
 - **Real-time Database:** Firebase 🔥
-- **Tools:** Visual Studio Code, GitHub, Jira, Figma 🛠️
+- **Tools:** Visual Studio Code, GitHub, Jira 🛠️
   
 ## **Launching Instructions 🌟** 
 1.  Click the `<> Code` button on this page and choose `Download ZIP`. Extract the contents to a designated folder on your computer. <br>
