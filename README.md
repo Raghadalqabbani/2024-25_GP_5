@@ -12,7 +12,7 @@
 - **AI Framework:** TensorFlow ⚙️
 - **Gesture Tracking:** MediaPipe ✋
 - **Cloud Services:** Google Cloud ☁️
-- **Database:** MySQL 🗄️
+- **Database:** NoSQL 🗄️
 - **Real-time Database:** Firebase 🔥
 - **Tools:** Visual Studio Code, GitHub, Jira 🛠️
   
