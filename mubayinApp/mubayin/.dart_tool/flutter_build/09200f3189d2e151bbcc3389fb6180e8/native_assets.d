@@ -1,0 +1,1 @@
+ C:\\flutterapps\\mubayin3\\mubayin\\.dart_tool\\flutter_build\\09200f3189d2e151bbcc3389fb6180e8\\native_assets.yaml: 
