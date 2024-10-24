@@ -8,7 +8,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:http/http.dart' as http;
 
 class GoogleSpeechService {
-  final String apiKey = 'AIzaSyA22NkF0fEpUBlyj1YDrjerNlPOKp22sVs'; // Replace with your Google API key
+  final String apiKey = ''; // Replace with your Google API key
 
   Future<String> transcribeAudio(File audioFile, String languageCode) async {
     final String apiUrl =
