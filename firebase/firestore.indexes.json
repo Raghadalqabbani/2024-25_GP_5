@@ -1,0 +1,22 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "History",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "caller_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "receiver_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date_time",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}
