@@ -1,4 +1,4 @@
-<img src="mubayin/assets/images/logo2.png" alt="Mubayin Logo" width="350"/>
+<img src="assets/images/logo2.png" alt="Mubayin Logo" width="350"/>
 
 
 #  Mubayin | مُبيِّــــن  
