@@ -23,7 +23,6 @@
 
 3.  Start the app using your local server or the Flutter command line tools. <br><br>
 
-
 ## **Instructions for Using the Backend for Hand Landmark Detection:✋**
 
 1- in command line Navigate to the Directory HandModel-backend
@@ -39,7 +38,7 @@ you can find it by running in command line {ipconfig}-> then take the ipv4 and r
 
 6- run flutter app 
 
-
+<br>
 
 And there you go! Mubayin should now be up and running on your local machine. Enjoy exploring 💜🌟 ! <br> 
 
