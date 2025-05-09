@@ -1,19 +1,19 @@
 {
   "indexes": [
     {
-      "collectionGroup": "History",
+      "collectionGroup": "calls",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "caller_id",
+          "fieldPath": "callerId",
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "receiver_id",
+          "fieldPath": "receiverId",
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "date_time",
+          "fieldPath": "createdAt",
           "order": "DESCENDING"
         }
       ]

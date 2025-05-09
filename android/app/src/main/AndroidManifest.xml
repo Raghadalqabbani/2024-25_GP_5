@@ -9,11 +9,14 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
   <uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+<uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:label="Mubayin"
         tools:replace="android:label, android:icon"
         android:icon="@mipmap/ic_launcher"
-        android:requestLegacyExternalStorage="true">
+        android:requestLegacyExternalStorage="true"
+            android:usesCleartextTraffic="true"
+        >
 
         <activity
             android:name=".MainActivity"

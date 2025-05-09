@@ -67,3 +67,24 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Dart & Flutter
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+pubspec.lock
+
+# Build outputs
+build/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Generated.xcconfig
+android/app/build/
+*.iml
+
+# IDE files
+.idea/
+.vscode/
+*.log

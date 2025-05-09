@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:mubayin/services/DangerAlertPage.dart';
 import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
@@ -131,19 +132,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
   name: 'VideoCallPage',
   path: '/videoCallPage',
   builder: (context, params) {
+    
   // Retrieve the callId parameter from the route
   final token = params.getParam('token', ParamType.String) ?? ''; // Call ID
     final channelName = params.getParam('channelName', ParamType.String) ?? ''; // Call ID
+        final userId = params.getParam('userId', ParamType.String) ?? ''; // Call ID
 
+final uid = params.getParam('uid', ParamType.int) ?? 0; // ✅ FIXED: define uid as int
   // final uid = params.getParam('uid', ParamType.String) ?? ''; // Call ID
-
+ 
+  // final cameraInitiallyOff = params.getParam('cameraOff', ParamType.bool) ?? false;
+  //   final micInitiallyMuted = params.getParam('micInitiallyMuted', ParamType.bool) ?? false;
 
   return VideoCallPageWidget(
     token: token, // Pass the callId to the widget
     channelName:channelName,
-  //   uid:uid,
+    uid:uid,
+    userId:userId,
+    //  cameraInitiallyOff: cameraInitiallyOff,
+    //   micInitiallyMuted: micInitiallyMuted,
    );
   },
+),
+FFRoute(
+  name: 'DangerAlertPage',
+  path: '/danger',
+  builder: (context, params) => const DangerAlertPage(),
 ),
 
 

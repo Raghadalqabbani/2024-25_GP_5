@@ -149,6 +149,10 @@ class _CallPageState extends State<CallPage> {
       extra: {
         'token': token,
         'channelName': channelName,
+         'uid': 0,
+         'userId':widget.callerId,
+      //    'cameraInitiallyOff': false, // 👈 or false
+      // 'micInitiallyMuted': true,  // 👈 or false
       },
     );
   }

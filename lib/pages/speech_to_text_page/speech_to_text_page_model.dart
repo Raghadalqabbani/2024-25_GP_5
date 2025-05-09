@@ -6,19 +6,30 @@ import 'package:flutter_sound/flutter_sound.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:http/http.dart' as http;
-
 class GoogleSpeechService {
-  // Fetch API Key from environment variable
-  final String apiKey = const String.fromEnvironment('API_KEY', defaultValue: 'No API Key Provided');
+  String? _apiKey;
+
+  Future<void> fetchApiKey() async {
+    if (_apiKey != null) return; // Already fetched
+
+    final response = await http.get(Uri.parse("https://call-backend-2333bc65bd8b.herokuapp.com/api/calls/get-google-api-key"));
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      _apiKey = data['apiKey'];
+    } else {
+      throw Exception('Failed to fetch API key: ${response.body}');
+    }
+  }
 
   Future<String> transcribeAudio(File audioFile, String languageCode) async {
-    final String apiUrl = 'https://speech.googleapis.com/v1/speech:recognize?key=$apiKey';
+    await fetchApiKey(); // Make sure API key is loaded
 
-    // Convert audio file to base64
+    final String apiUrl = 'https://speech.googleapis.com/v1/speech:recognize?key=$_apiKey';
+
     List<int> audioBytes = await audioFile.readAsBytes();
     String base64Audio = base64Encode(audioBytes);
 
-    // Create the request payload
     Map<String, dynamic> requestPayload = {
       'config': {
         'encoding': 'LINEAR16',
@@ -41,7 +52,6 @@ class GoogleSpeechService {
       final result = jsonDecode(response.body);
       log("Transcription result: $result");
 
-      // Check if results array is not null and contains transcriptions
       if (result['results'] != null && result['results'].isNotEmpty) {
         final String transcription = result['results'][0]['alternatives'][0]['transcript'];
         return transcription;
@@ -54,6 +64,7 @@ class GoogleSpeechService {
     }
   }
 }
+
 
 class SpeechToTextPageModel {
   FlutterSoundRecorder? _recorder;

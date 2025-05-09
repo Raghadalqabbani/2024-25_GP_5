@@ -1,3 +1,4 @@
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/email_exist_widget.dart';
@@ -290,7 +291,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                                       valueOrDefault<
                                                                           String>(
                                                                         currentUserPhoto,
-                                                                        'https://www.meyerslab.org/wp-content/uploads/2019/04/Screen-Shot-2019-04-26-at-10.54.30-AM-1.png',
+                                                                        'https://media.istockphoto.com/id/2201252900/vector/profile-picture-flat-icon.jpg?s=612x612&w=0&k=20&c=5-X_IPDkR4eBL54BzAI7zGInMR4OJ68ybEmlbWPMMmQ=',
                                                                       ),
                                                                       fit: BoxFit
                                                                           .cover,

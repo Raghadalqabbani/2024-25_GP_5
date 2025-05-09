@@ -179,7 +179,7 @@ class _ContactDetailsWidgetState extends State<ContactDetailsWidget> {
                               child: Image.network(
                                 valueOrDefault<String>(
                                   containerUsersRecord?.photoUrl,
-                                  'https://www.meyerslab.org/wp-content/uploads/2019/04/Screen-Shot-2019-04-26-at-10.54.30-AM-1.png',
+                                  'https://media.istockphoto.com/id/2201252900/vector/profile-picture-flat-icon.jpg?s=612x612&w=0&k=20&c=5-X_IPDkR4eBL54BzAI7zGInMR4OJ68ybEmlbWPMMmQ=',
                                 ),
                                 fit: BoxFit.cover,
                               ),
@@ -391,6 +391,55 @@ class _ContactDetailsWidgetState extends State<ContactDetailsWidget> {
       );
       return;
     }
+// Compare receiver's email
+    const compareEmailApiUrl =
+        'https://call-backend-2333bc65bd8b.herokuapp.com/api/calls/compareReceiverEmail';
+
+    final compareResponse = await http.post(
+      Uri.parse(compareEmailApiUrl),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'callerId': callerId,
+        'receiverId': receiverId,
+      }),
+    );
+
+    if (compareResponse.statusCode == 200) {
+      final compareData = jsonDecode(compareResponse.body);
+
+      if (compareData['match'] != true) {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Contact Email Updated'),
+            content: const Text(
+                'The contact has updated their email. Please verify their details.'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('OK'),
+              ),
+            ],
+          ),
+        );
+        return; // Exit if emails do not match
+      }
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Error'),
+          content: const Text('Failed to verify contact email.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
 
     final receiverName = listViewContactsRecord.contactName ?? 'Unknown Receiver';
     final receiverDocRef =
@@ -436,10 +485,39 @@ class _ContactDetailsWidgetState extends State<ContactDetailsWidget> {
       return;
     }
 
+
+// Fetch the updated caller name using the API
+String updatedCallerName = callerName; // Default to the existing callerName
+try {
+  const apiUrl = 'https://call-backend-2333bc65bd8b.herokuapp.com/api/calls/getReceiverContacts';
+  final response = await http.post(
+    Uri.parse(apiUrl),
+    headers: {'Content-Type': 'application/json'},
+    body: jsonEncode({
+      'callerId': callerId,
+      'receiverId': receiverId,
+    }),
+  );
+
+  if (response.statusCode == 200) {
+    final data = jsonDecode(response.body);
+    updatedCallerName = data['contactName'] ?? callerName;
+    print('Updated Caller Name from API: $updatedCallerName');
+  } else {
+    print('Failed to fetch caller name from API: ${response.body}');
+  }
+} catch (e) {
+  print('Error fetching caller name from API: $e');
+}
+
+// Use the updatedCallerName in subsequent actions
+
+
+
     final channelId = "incoming_call_channel"; // Set the channel ID
     print('Request payload: ${{
       'callerId': callerId,
-      'callerName': callerName,
+      'callerName': updatedCallerName,
       'receiverId': receiverId,
       'receiverName': receiverName,
       'receiverFcmToken': receiverFcmToken,
@@ -451,7 +529,7 @@ class _ContactDetailsWidgetState extends State<ContactDetailsWidget> {
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'callerId': callerId,
-        'callerName': callerName,
+        'callerName': updatedCallerName,
         'receiverId': receiverId,
         'receiverName': receiverName,
         'receiverFcmToken': receiverFcmToken,
@@ -468,7 +546,7 @@ class _ContactDetailsWidgetState extends State<ContactDetailsWidget> {
           builder: (context) => CallPage(
             callId: callData['callId'],
             callerId: callerId,
-            callerName: callerName,
+            callerName: updatedCallerName,
             receiverId: receiverId,
             receiverName: receiverName,
           ),
@@ -744,4 +822,7 @@ class _ContactDetailsWidgetState extends State<ContactDetailsWidget> {
       ),
     );
   }
+
+
+  
 }

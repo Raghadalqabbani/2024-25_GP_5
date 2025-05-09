@@ -1,3 +1,13 @@
+// This Node.js code creates a simple file upload server that:
+
+//     Accepts image uploads from clients (like your Flutter app).
+
+//     Saves them in a folder called uploads/.
+
+//     Makes the uploaded images viewable from the browser via /uploads/<filename>.
+
+//     Uses timestamps in filenames to avoid duplicates.
+
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
@@ -35,5 +45,5 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://192.168.0.202:${port}`);
+    console.log(`Server running at http://192.168.8.136:${port}`);
 });
