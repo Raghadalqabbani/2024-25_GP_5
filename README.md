@@ -31,12 +31,6 @@
 
 • Run Mubayin application.
 
-Login Credentials
-user 1:
-
-• Email: hala@gmail.com
-
-• Password: 123456Ha@
 
 Please use these credentials on the login screen to try the app's full functionalit
 
