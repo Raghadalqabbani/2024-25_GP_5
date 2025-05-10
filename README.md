@@ -25,6 +25,7 @@ danger. Mubayin enhances user safety, awareness, and promotes digital accessibil
 • Open the Mubayin repository on GitHub.
 
 • Click the Code button and download the .zip file.
+
 • Extract the .zip file.
 
 • Open the project in Visual Studio Code.
