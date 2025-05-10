@@ -17,26 +17,18 @@
 - **Tools:** Visual Studio Code, GitHub, Jira 🛠️
   
 ## **Launching Instructions 🌟** 
-1.  Click the `<> Code` button on this page and choose `Download ZIP`. Extract the contents to a designated folder on your computer. <br>
-
-2.  Navigate to the extracted folder and open it in your preferred development environment. Ensure you have all necessary dependencies installed. <br>
-
-3.  Start the app using your local server or the Flutter command line tools. <br>
-
-## **Instructions for Using the Backend for Hand Landmark Detection:✋**
-
-1- in command line Navigate to the Directory HandModel-backend
-
-2- Install Required Libraries:by runinnig the following command line  {pip install flask mediapipe opencv-python numpy}// note the command is between the {}
-
-3- in the following file lib->pages->video_call_page->video_call_page_widget.dart change the url in line 17 {http://x.x.X.X:3002/upload} to your network 
-you can find it by running in command line {ipconfig}-> then take the ipv4 and replace x.x.x.x
-
-4- make sure you preform step 1
-
-5- run the following in cmd {python handModel.py}
-
-6- run flutter app 
+• Open the Mubayin repository on GitHub.
+• Click the Code button and download the .zip file.
+• Extract the .zip file.
+• Open the project in Visual Studio Code.
+• Go to File > Open and locate the extracted project folder.
+• Use an Android Emulator or connect a real Android device.
+• Run Mubayin application.
+Login Credentials
+user 1:
+• Email: hala@gmail.com
+• Password: 123456Ha@
+Please use these credentials on the login screen to try the app's full functionalit
 
 <br>
 
