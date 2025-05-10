@@ -17,13 +17,20 @@
 - **Tools:** Visual Studio Code, GitHub, Jira 🛠️
   
 ## **Launching Instructions 🌟** 
+
 • Open the Mubayin repository on GitHub.
+
 • Click the Code button and download the .zip file.
 • Extract the .zip file.
+
 • Open the project in Visual Studio Code.
+
 • Go to File > Open and locate the extracted project folder.
+
 • Use an Android Emulator or connect a real Android device.
+
 • Run Mubayin application.
+
 Login Credentials
 user 1:
 • Email: hala@gmail.com
