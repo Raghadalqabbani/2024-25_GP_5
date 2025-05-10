@@ -3,7 +3,11 @@
 
 #  Mubayin | مُبيِّــــن  
 ## **Introduction 🌟** 
-**Mubayin**  is a mobile application designed to enhance communication between deaf-mute individuals and the hearing community. Utilizing AI and deep learning, Mubayin offers real-time sign language interpretation and speech-to-text conversion in both Arabic and English. Its goal is to create an inclusive environment where everyone can communicate effortlessly 💜.
+**Mubayin** is an AI-powered application designed to bridge the communication gap for the deaf-mute 
+community in line with Saudi Arabia’s Vision 2030. The system uses deep learning algorithms to 
+translate Arabic and American Sign Language (ArSL and ASL) into real-time written text during video 
+calls. It also converts spoken voice into text and detects environmental sounds, alerting users to potential 
+danger. Mubayin enhances user safety, awareness, and promotes digital accessibility and inclusion💜.
 
 ## **Technology Stack 🌟** 
 - **Programming Language (Backend):** Python 🐍
@@ -30,9 +34,6 @@
 • Use an Android Emulator or connect a real Android device.
 
 • Run Mubayin application.
-
-
-Please use these credentials on the login screen to try the app's full functionalit
 
 <br>
 
